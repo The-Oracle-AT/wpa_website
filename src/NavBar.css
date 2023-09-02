@@ -1,0 +1,91 @@
+/* Basic styling for navbar*/
+.navbar {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    transition: all 1s ease;
+}
+.navbar-links a{
+    padding: 1px 5px;
+    color: whitesmoke;
+    text-decoration: none;
+    border-radius: 10%;
+    display: inline;
+
+}
+.navbar-links a:hover{
+    background-color: #76B900;
+}
+.navbar-links a:active{
+    background-color: #76B900;
+}
+/* Styling for collapsed navbar*/
+.collapsed .navbar-links{
+    display: none;
+}
+
+/* Styling for collapsed toggle icon.
+* hide 2nd child and rotate the 1st and 3rd children
+* to form X for close 
+*/
+.navbar-toggle {
+    cursor: pointer;
+    display: none;
+}
+.icon span{
+    background-color: #76B900;
+    padding: 2px 10px;
+    margin: 2px;
+    border-radius: 20%;
+    gap: 10px;
+    display: flex;
+    position: relative;
+    
+}
+/*Styling for open icon*/
+.icon.open span:nth-child(1){
+    transform: rotate(-45deg) translate(-3px, 6px);
+}
+.icon.open span:nth-child(2){
+    opacity: 0;
+}
+.icon.open span:nth-child(3){
+    transform: rotate(45deg) translate(-3px, -6px);
+}
+
+/*Media queries for responsiveness
+* 1. Make contents flow downward.
+* 2. Hide navbar-links
+* 3. Display toggle button
+* 4. Display/Hide navbar-links when icon is toggled
+*/
+
+@media screen and (max-width: 768px){
+    .navbar{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+
+    .navbar-links{
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        background-color: #333;
+        padding: 10px 20px;
+    }
+
+    .collapsed .navbar-links{
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: contents;
+        align-self: flex-end;
+    }
+}
