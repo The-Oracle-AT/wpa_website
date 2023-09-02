@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './NavBar.css';
+import './ComponentsStyleSheet.css';
 
 /*NavBar - a fucntion that creates a navigation bar for a 
 * website. This will be converted to a .module.tsx file for 
@@ -21,9 +21,9 @@ const NavBar = () => {
      
      return (
         <nav id= "navbar" className = {`navbar ${collapsed ? 'collapsed' : ''}`}>
-            <div className='navbar-brand'>Logo</div>
+            <div className='navbar-brand'>Wolf Logo</div>
             <div className={`navbar-links ${ collapsed ? 'collapsed' : ''}`}>
-                <a href='#'>Home</a>
+                <a href='#' onClick={toggleCollapsed}>Home</a>
                 <a href='#'>Services</a>
                 <a href='#'>About</a>
                 <a href='#'>Contact</a>
@@ -43,10 +43,24 @@ const NavBar = () => {
 const HomeContent = () =>{
     return(
         <div className='home-content'>
-            
+            <h1> Home</h1>
         </div>
     );
-}
+};
+const ServiceContent = () =>{
+    return(
+        <div className='home-content'>
+            <h1> Service</h1>
+        </div>
+    );
+};
+const AboutContent = () =>{
+    return(
+        <div className='home-content'>
+            <h1> About </h1>
+        </div>
+    );
+};
 
 
 

@@ -64,6 +64,7 @@
 * 4. Display/Hide navbar-links when icon is toggled
 */
 
+
 @media screen and (max-width: 768px){
     .navbar{
         flex-direction: row;
