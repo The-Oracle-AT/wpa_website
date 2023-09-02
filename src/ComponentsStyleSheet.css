@@ -1,10 +1,13 @@
+:root{
+    --bg-color: #333;
+    --txt-color: white;
+}
 /* Basic styling for navbar*/
 .navbar {
     display: flex;
-
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: var(--bg-color);
     color: white;
     padding: 10px 20px;
     transition: all 1s ease;
@@ -90,3 +93,5 @@
         align-self: flex-end;
     }
 }
+
+/*Styling the conact form*/
