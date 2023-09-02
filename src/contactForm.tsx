@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './ComponentsStyleSheet.css';
 /*Define tsx interface to specify shape and size of form input*/
 interface FormData {
     name: string;
@@ -14,9 +14,9 @@ interface FormData {
     param: e - an html element representing the form input fields
 *  handleSubmit-handles form submission and prevents default behaviour, 
 *       i.e stops the page from reloading
-    param: e - an html element reperesenting form input fields
+    param: e - an html element representing form input fields
 *  return: renders the form with specified form input fields each with their values
-*       correponding onChange handlers
+*       corresponding onChange handlers
 *
 */
 
@@ -25,7 +25,7 @@ const SimpleForm: React.FC = () => {
     const [FormData, setFormData] = useState<FormData>({
         name: '',
         email: '',
-        contact: 0
+        contact: 27
 
     });
 
@@ -48,30 +48,33 @@ const SimpleForm: React.FC = () => {
             {/*Name input field */}
             <form onSubmit={handleSubmit}>
                 <div className='form-group'>
-                    <label>Name</label>
+                    <label>Name: </label>
                     <input 
                         type='text' 
-                        name='name' 
+                        name='Names' 
                         value={FormData.name} 
+                        placeholder='Your name and surname...'
                         onChange={handleInputChange} 
                     />
                 </div>
                 {/*Email input field */}
                 <div className='form-group'>
-                    <label>Email</label>
+                    <label>Email: </label>
                     <input 
                         type='text' 
                         name='email' 
-                        value={FormData.email} 
+                        value={FormData.email}
+                        placeholder='Your Email...'
                         onChange={handleInputChange} />
                 </div>
                 {/*Contact input field */}
                 <div className='form-group'>
-                    <label>Contact</label>
+                    <label>Contact: </label>
                     <input 
                         type='number' 
                         name='contact' 
                         value={FormData.contact} 
+                        placeholder='+27'
                         onChange={handleInputChange} 
                     />
                 </div>
