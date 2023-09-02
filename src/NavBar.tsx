@@ -1,5 +1,16 @@
+import { faEnvelope, faHome, faInfoCircle, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import './ComponentsStyleSheet.css';
+    /*NavBar - a fucntion that creates a navigation bar for a
+    * website. This will be converted to a .module.tsx file for
+    * reusability in differents site.
+    * notice that the navbar can either be navbarcollpased or just navbar
+    * upon toggling a prefix is added. The toggle is the screen size which
+    * is specified in the CSS style sheet
+    * param : No params
+    *
+    * Return: A navigation bar that will be rendered on a webpage*/
 
 /*NavBar - a fucntion that creates a navigation bar for a 
 * website. This will be converted to a .module.tsx file for 
@@ -23,10 +34,10 @@ const NavBar = () => {
         <nav id= "navbar" className = {`navbar ${collapsed ? 'collapsed' : ''}`}>
             <div className='navbar-brand'>Wolf Logo</div>
             <div className={`navbar-links ${ collapsed ? 'collapsed' : ''}`}>
-                <a href='#' onClick={toggleCollapsed}>Home</a>
-                <a href='#'>Services</a>
-                <a href='#'>About</a>
-                <a href='#'>Contact</a>
+                <a href='#'><FontAwesomeIcon icon = { faHome }/> Home</a>
+                <a href='#'><FontAwesomeIcon icon = { faInfoCircle } /> About</a>
+                <a href='#'><FontAwesomeIcon icon = { faEnvelope }/> Contact</a>
+                <a href='#'><FontAwesomeIcon icon = { faUserPlus }/> Sign In</a>
             </div>
             
             {/* This is the toggle icon*/}
