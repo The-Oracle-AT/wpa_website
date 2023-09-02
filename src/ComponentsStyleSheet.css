@@ -96,7 +96,11 @@
     }
 }
 
-/*Styling the contact form*/
+/*Styling the contact form
+* .form: grand-parent
+* form: parent
+* form-group: children, form details
+*/
 .form {
     display: flex;
     flex-direction: column;
@@ -113,7 +117,7 @@
     border-top-left-radius: var(--border-rad);
     border-top-right-radius: var(--border-rad);
 }
-/*Styling the inner box*/
+/*Styling the parent*/
 .form form{
     width : 88%;
     height : 100%;
@@ -121,15 +125,13 @@
     background: #0d0e0d;
     border-radius: 4px;
 }
-/*Styling the inner box contents*/
+/*Styling the children*/
 .form form .form-group{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
 }
-
-/*Styling the field labels and inputs*/
 .form label{
     color: rgb(247, 246, 246);
     text-decoration: solid;
