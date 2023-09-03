@@ -70,6 +70,7 @@
 */
 
 
+
 @media screen and (max-width: 768px){
     .navbar{
         flex-direction: row;
@@ -91,10 +92,38 @@
     }
 
     .navbar-toggle {
-        display: contents;
-        align-self: flex-end;
+        float: none;
+        display: block;
+        text-align: left;
     }
 }
+/* This enables the navbar to be restored even though
+* the icon is still open, the long awaited fix*/
+@media screen and (min-width: 768px){
+    .navbar{
+        display: flex;
+    }
+
+
+    .navbar-links{
+        float: right;
+        text-align: right;
+        background-color: var(--bg-color);
+        padding: 10px;
+    }
+
+    .collapsed .navbar-links{
+        display: flex;
+    }
+
+    .navbar-toggle {
+        float: none;
+        display: none;
+        text-align: left;
+    }
+}
+
+
 
 /*Styling the contact form
 * .form: grand-parent
