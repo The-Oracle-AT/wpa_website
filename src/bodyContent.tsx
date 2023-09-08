@@ -38,11 +38,11 @@ const HomeContent = () => {
             </header>
             <section className="body-continer">
                 <p>
-                    <h1>How to join?</h1><br />
+                    <h1>How to join?</h1>
                     Currently you can only join Wolf Pack Academia if our organisation has approached your schools body with the the
                     offer. Every member has a specific login that we created with an ID. The selection process consists of the following,
                     a background check from your educator, and an induction test to assess your eligibility to make the most of the program.
-                    <br /><h1>Future plans</h1><br/>
+                    <br /><h1>Future plans</h1>
                     We are currently in the process of developing a new website. We will be launching a new website in 2024 depending on the 
                     resources we have. Upon scaling it wioll be made publicly accessible. There will be a free version and a vip version.
                     W
