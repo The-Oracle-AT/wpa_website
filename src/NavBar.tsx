@@ -1,7 +1,7 @@
 import { faEnvelope, faHome, faInfoCircle, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
-import './ComponentsStyleSheet.css';
+import './Stylesheets/ComponentsStyleSheet.css';
     /*NavBar - a fucntion that creates a navigation bar for a
     * website. This will be converted to a .module.tsx file for
     * reusability in differents site.
@@ -51,27 +51,8 @@ const NavBar = () => {
         </nav>
      );
 };
-const HomeContent = () =>{
-    return(
-        <div className='home-content'>
-            <h1> Home</h1>
-        </div>
-    );
-};
-const ServiceContent = () =>{
-    return(
-        <div className='home-content'>
-            <h1> Service</h1>
-        </div>
-    );
-};
-const AboutContent = () =>{
-    return(
-        <div className='home-content'>
-            <h1> About </h1>
-        </div>
-    );
-};
+
+//Create a function to handle tabs when the user clicks on the Home, About and contact links*/
 
 
 

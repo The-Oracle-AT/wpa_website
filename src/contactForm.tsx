@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ComponentsStyleSheet.css';
+import './Stylesheets/ComponentsStyleSheet.css';
 /*Define tsx interface to specify shape and size of form input*/
 interface FormData {
     name: string;
