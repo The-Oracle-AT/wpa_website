@@ -41,12 +41,12 @@ const NavBar = () => {
                         <Link to="/" ><FontAwesomeIcon icon = { faHome }/> Home</Link>
                         </a>
                     <a href='#'>
-                        <Link to="/blogs" ><FontAwesomeIcon icon = { faInfoCircle }/> Blogs</Link>
+                        <Link to="/learn" ><FontAwesomeIcon icon = { faInfoCircle }/> Learn</Link>
                     </a>
                     <a href='#'>
                         <Link to="/contact" ><FontAwesomeIcon icon = { faEnvelope }/> Contact</Link>
                     </a>
-                    <a href='#'><FontAwesomeIcon icon = { faUserPlus }/> Sign In</a>
+                    <a href='#'><Link to = "/login"><FontAwesomeIcon icon = { faUserPlus }/> Sign In</Link></a>
                     
                 </div>
                 

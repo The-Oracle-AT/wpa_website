@@ -5,9 +5,10 @@ import NavBar from './NavBar.tsx';
 import './Stylesheets/App.css';
 import HomeContent from './bodyContent.tsx';
 import SimpleForm from './contactForm.tsx';
-import Blogs from './pages/Blogs.tsx';
 import Contact from './pages/Contact.tsx';
+import Learn from './pages/Learn.tsx';
 import NoPage from './pages/NoPage.tsx';
+import SocialLogin from './pages/SocialLogin.tsx';
 
 
 
@@ -18,9 +19,10 @@ function App() {
       <Route path="/" element={<NavBar/>}>
         <Route index element={<HomeContent/>} />
         <Route path="/contact" element={<SimpleForm/>} />
-        <Route path="/blogs" element={<Blogs/>} />
+        <Route path="/learn" element={<Learn/>} />
         <Route path="/contact" element={<Contact/>} />
         <Route path="*" element={<NoPage/>} />
+        <Route path="/login" element={ <SocialLogin/>} />
       </Route>
     </Routes>
     </BrowserRouter>
