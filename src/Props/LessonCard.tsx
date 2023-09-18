@@ -8,7 +8,7 @@ import './PropsStylesheet.css';
 interface LessonCardDetails{
     image: string;
     title: String;
-    description: String
+    description: String;
 }
 
 const LessonCard: React.FC<LessonCardDetails> = ({image, title, description = "Lesson description"}) => {

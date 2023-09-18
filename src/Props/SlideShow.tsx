@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import "./Stylesheets/ComponentsStyleSheet.css";
+import "../Stylesheets/ComponentsStyleSheet.css";
 
 /**Definiting interface for slides show
  * Ensure that the order of the altText is the same as that 

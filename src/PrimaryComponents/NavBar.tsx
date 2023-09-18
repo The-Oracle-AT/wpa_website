@@ -3,7 +3,7 @@ import { Link, Outlet } from 'react-router-dom';
 import { faEnvelope, faHome, faInfoCircle, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
-import './Stylesheets/ComponentsStyleSheet.css';
+import '../Stylesheets/ComponentsStyleSheet.css';
     /*NavBar - a function that creates a navigation bar for a
     * website. This will be converted to a .module.tsx file for
     * reusability in differents site.
@@ -23,7 +23,7 @@ import './Stylesheets/ComponentsStyleSheet.css';
 * param : No params
 * 
 * Return: A navigation bar that will be rendered on a webpage*/
-const NavBar = () => {
+const NavBar: React.FC = () => {
     const [collapsed, setCollapsed] = useState(false);
      
     /* toggleCollapsed - to toggle from callapsed and 
@@ -36,18 +36,12 @@ const NavBar = () => {
         <>
             <nav id= "navbar" className = {`navbar ${collapsed ? 'collapsed' : ''}`}>
                 <div className='navbar-brand'>Wolf Logo</div>
+                
                 <div className={`navbar-links ${ collapsed ? 'collapsed' : ''}`}>
-                    <a href='#'>
-                        <Link to="/" ><FontAwesomeIcon icon = { faHome }/> Home</Link>
-                        </a>
-                    <a href='#'>
-                        <Link to="/learn" ><FontAwesomeIcon icon = { faInfoCircle }/> Learn</Link>
-                    </a>
-                    <a href='#'>
-                        <Link to="/contact" ><FontAwesomeIcon icon = { faEnvelope }/> Contact</Link>
-                    </a>
-                    <a href='#'><Link to = "/login"><FontAwesomeIcon icon = { faUserPlus }/> Sign In</Link></a>
-                    
+                    <Link to = "/" ><FontAwesomeIcon icon = { faHome }/> Home</Link>
+                    <Link to = "/learn" ><FontAwesomeIcon icon = { faInfoCircle }/> Learn</Link>
+                    <Link to = "/contact" ><FontAwesomeIcon icon = { faEnvelope }/> Contact</Link>
+                    <Link to = "/login"><FontAwesomeIcon icon = { faUserPlus }/> Sign In</Link> 
                 </div>
                 
                 {/* This is the toggle icon*/}
@@ -58,8 +52,13 @@ const NavBar = () => {
                         <span></span>
                     </div>
                 </div>
-            </nav>
-            <Outlet/>
+            </nav> 
+
+
+            <main>
+                <Outlet/>
+            </main>
+            
         </>
      );
 };

@@ -1,4 +1,4 @@
-import Slideshow from './SlideShow';
+import Slideshow from './Props/SlideShow';
 import "./Stylesheets/ComponentsStyleSheet.css";
 //importing images
 import image1 from './assets/youtubeSize/wpaHatBlack.png';
@@ -17,7 +17,9 @@ const HomeContent = () => {
     ];
     return (
         <div className="home-content-container">
+
             <header className="header-content">
+
                 <h1 className="heading-title">Welcome to Wolf Pack Academia</h1>
                 <p className="heading-text-container">
                     <span>W</span>elcome to our website! We are dedicated to providing you with the latest information and services.
@@ -32,17 +34,24 @@ const HomeContent = () => {
                     Remember, knowledge is power, and we're here to empower you every step of the way.
                     Explore, learn, and thrive with us at [WOLf PACK ACADEMIA].
                 </p>
+
                 <div className="heading-image-container">
                     <img className="heading-image" src={image3} alt="Wolf Pack Academia" />
                 </div>
+                
             </header>
-            <section className="body-continer">
+
+            <section className="body-container">
+                <br />
+                <h1>How to join?</h1>
                 <p>
-                    <h1>How to join?</h1>
                     Currently you can only join Wolf Pack Academia if our organisation has approached your schools body with the the
                     offer. Every member has a specific login that we created with an ID. The selection process consists of the following,
                     a background check from your educator, and an induction test to assess your eligibility to make the most of the program.
-                    <br /><h1>Future plans</h1>
+                </p>
+                <br />
+                <h1>Future plans</h1>
+                <p>
                     We are currently in the process of developing a new website. We will be launching a new website in 2024 depending on the 
                     resources we have. Upon scaling it wioll be made publicly accessible. There will be a free version and a vip version.
                     W
